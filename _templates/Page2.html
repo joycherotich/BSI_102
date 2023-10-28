@@ -1,0 +1,10 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+<form method="post" action="{% url 'page2' %}">
+    {% csrf_token %}
+    {{ form.offer.label_tag }}
+    {{ form.offer }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
