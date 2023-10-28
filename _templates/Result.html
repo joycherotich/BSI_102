@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+<p>Player 1:</p>
+<p>Amount offered to Player 2: {{ player.offer }}</p>
+<p>Decision made by Player 3: {{ player.decision }}</p>
+<p>Your payout: {{ player.payoff }}</p>
+
+<hr>
+
+<p>Player 2:</p>
+<p>Amount received from Player 1: {{ group.offer_accepted }}</p>
+<p>Decision made by Player 3: {{ group.punish }}</p>
+<p>Your payout: {{ Constants.endowment - group.offer_accepted }}</p>
+{% endblock %}
